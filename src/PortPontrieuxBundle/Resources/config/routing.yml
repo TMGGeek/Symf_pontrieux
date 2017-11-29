@@ -1,0 +1,13 @@
+port_pontrieux_homepage:
+    path:     /
+    defaults: { _controller: PortPontrieuxBundle:Default:index }
+port_pontrieux_tarifs:
+    path:     /tarifs/{page}
+    defaults:
+        _controller: PortPontrieuxBundle:Tarifs:liste
+        page:     1
+    requirements:
+        page: \d*
+port_pontrieux_nouvelEmplacement:
+    path:     /emplacement
+    defaults: { _controller: PortPontrieuxBundle:Emplacement:inserer }
